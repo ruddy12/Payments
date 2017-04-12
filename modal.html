@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/bootstrap-wysihtml5.css">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/icons.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <!--script src="js/modernizr.custom.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/sidebarEffects.js"></script-->
+<style type="text/css">
+    .hovereffect {
+  width: 100%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
+}
+
+.hovereffect .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.6);
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transform: translate(460px, -100px) rotate(180deg);
+  -ms-transform: translate(460px, -100px) rotate(180deg);
+  transform: translate(460px, -100px) rotate(180deg);
+  -webkit-transition: all 0.2s 0.4s ease-in-out;
+  transition: all 0.2s 0.4s ease-in-out;
+}
+
+.hovereffect img {
+  display: block;
+  position: relative;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.hovereffect h2 {
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  font-size: 17px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.hovereffect a.info {
+  display: inline-block;
+  text-decoration: none;
+  padding: 7px 14px;
+  text-transform: uppercase;
+  color: #fff;
+  border: 1px solid #fff;
+  margin: 50px 0 0 0;
+  background-color: transparent;
+  -webkit-transform: translateY(-200px);
+  -ms-transform: translateY(-200px);
+  transform: translateY(-200px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.hovereffect a.info:hover {
+  box-shadow: 0 0 5px #fff;
+}
+
+.hovereffect:hover .overlay {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+  -webkit-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+}
+
+.hovereffect:hover h2 {
+  -webkit-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  transform: translateY(0px);
+  -webkit-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+}
+
+.hovereffect:hover a.info {
+  -webkit-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  transform: translateY(0px);
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+
+
+
+
+
+
+
+
+.hovereffect2 {
+  width: 100%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
+}
+
+.hovereffect2 .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+
+.hovereffect2 img {
+  display: block;
+  position: relative;
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+}
+
+/*.hovereffect2:hover img {
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0" /><feGaussianBlur stdDeviation="3" /></filter></svg>#filter');
+  filter: grayscale(1) blur(3px);
+  -webkit-filter: grayscale(1) blur(3px);
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}*/
+
+.hovereffect2 h2 {
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  font-size: 17px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.hovereffect2 a.info {
+  display: inline-block;
+  text-decoration: none;
+  padding: 7px 14px;
+  border: 1px solid #fff;
+  margin: 50px 0 0 0;
+  background-color: transparent;
+}
+
+.hovereffect2 a.info:hover {
+  box-shadow: 0 0 5px #fff;
+}
+
+.hovereffect2 a.info, .hovereffect h2 {
+  -webkit-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  transform: scale(0.7);
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.hovereffect2:hover a.info, .hovereffect:hover h2 {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+
+
+.hovereffect11 {
+  width: 100%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
+  background: #42b078;
+}
+
+.hovereffect11 .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  padding: 50px 20px;
+}
+
+.hovereffect11 img {
+  display: block;
+  position: relative;
+  max-width: none;
+  width: calc(100% + 20px);
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(-10px,0,0);
+  transform: translate3d(-10px,0,0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.hovereffect11:hover img {
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+.hovereffect11 h2 {
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  font-size: 17px;
+  overflow: hidden;
+  padding: 0.5em 0;
+  background-color: transparent;
+}
+
+.hovereffect11 h2:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  content: '';
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  -webkit-transform: translate3d(-100%,0,0);
+  transform: translate3d(-100%,0,0);
+}
+
+.hovereffect:hover h2:after {
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+.hovereffect11 p, .hovereffect11 a {
+  color: #FFF;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(100%,0,0);
+  transform: translate3d(100%,0,0);
+}
+
+.hovereffect11:hover p, .hovereffect11 a {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+.hovereffect {
+  width: 100%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
+  background: #42b078;
+}
+
+.hovereffect .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  padding: 50px 20px;
+}
+
+.hovereffect img {
+  display: block;
+  position: relative;
+  max-width: none;
+  width: calc(100% + 20px);
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(-10px,0,0);
+  transform: translate3d(-10px,0,0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.hovereffect:hover img {
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+.hovereffect h2 {
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  font-size: 17px;
+  overflow: hidden;
+  padding: 0.5em 0;
+  background-color: transparent;
+}
+
+.hovereffect h2:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  content: '';
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  -webkit-transform: translate3d(-100%,0,0);
+  transform: translate3d(-100%,0,0);
+}
+
+.hovereffect:hover h2:after {
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+.hovereffect p, .hovereffect a {
+  color: #FFF;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(100%,0,0);
+  transform: translate3d(100%,0,0);
+}
+
+.hovereffect:hover p, .hovereffect a {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+/* hover div */
+ .box {
+       /*float: left;
+       position: relative;
+       width: 14.285714286%;*/
+       
+
+
+    }
+.boxInner  {
+     outline: ;
+}
+    .boxInner img {
+       
+       display: block;
+       -webkit-filter: grayscale(00%);
+       -moz-filter: grayscale(00%);
+       -o-filter: grayscale(00%);
+       -webkit-transition: all 1s ease;
+         -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+
+    }
+
+
+    .boxInner img:hover {
+      
+    -webkit-transform: scale(1.4);
+    -moz-transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    -o-transform: scale(1.4);
+    transform: scale(1.4);
+    
+    }
+/*humbergur */
+body{
+  font-family: 'Noto Sans', sans-serif;
+  margin:0;
+  width:100%;
+  height:100vh;
+    background:#ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+header{
+  width:100%; 
+  background:#ffffff; 
+  height:60px; 
+  line-height:60px;
+  border-bottom:1px solid #dddddd;
+}
+.hamburger{
+  background:none;
+  position:absolute;
+  top:0;
+  right:0;
+  line-height:45px;
+  padding:5px 15px 0px 15px;
+  color:#999;
+  border:0;
+  font-size:1.4em;
+  font-weight:bold;
+  cursor:pointer;
+  outline:none;
+  z-index:10000000000000;
+}
+.cross{
+  background:none;
+  position:absolute;
+  top:0px;
+  right:0;
+  padding:7px 15px 0px 15px;
+  color:#999;
+  border:0;
+  font-size:3em;
+  line-height:65px;
+  font-weight:bold;
+  cursor:pointer;
+  outline:none;
+  z-index:10000000000000;
+}
+.menu{z-index:1000000; font-weight:bold; font-size:0.8em; width:100%; background:#f1f1f1;  position:absolute; text-align:center; font-size:12px;}
+.menu ul {margin: 0; padding: 0; list-style-type: none; list-style-image: none;}
+.menu li {display: block;   padding:15px 0 15px 0; border-bottom:#dddddd 1px solid;}
+.menu li:hover{display: block;    background:#ffffff; padding:15px 0 15px 0; border-bottom:#dddddd 1px solid;}
+.menu ul li a { text-decoration:none;  margin: 0px; color:#666;}
+.menu ul li a:hover {  color: #666; text-decoration:none;}
+.menu a{text-decoration:none; color:#666;}
+.menu a:hover{text-decoration:none; color:#666;}
+
+.glyphicon-home{
+  color:white; 
+  font-size:1.5em; 
+  margin-top:5px; 
+  margin:0 auto;
+}
+header{display:inline-block; font-size:12px;}
+span{padding-left:20px;}
+a{color:#336699;}
+</style>
+</head>
+<body>
+<div id="st-container" class="st-container">
+<div class="st-pusher">
+<nav class="st-menu st-effect-1" id="menu-1">
+        <h2 class="icon icon-lab">Sidebar</h2>
+        <ul>
+          <li><a class="icon icon-data" href="#">Data Management</a></li>
+          <li><a class="icon icon-location" href="#">Location</a></li>
+          <li><a class="icon icon-study" href="#">Study</a></li>
+          <li><a class="icon icon-photo" href="#">Collections</a></li>
+          <li><a class="icon icon-wallet" href="#">Credits</a></li>
+        </ul>
+      </nav>
+      <nav class="st-menu st-effect-4" id="menu-4">
+        <h2 class="icon icon-lab">Sidebar</h2>
+        <ul>
+          <li><a class="icon icon-data" href="#">Data Management</a></li>
+          <li><a class="icon icon-location" href="#">Location</a></li>
+          <li><a class="icon icon-study" href="#">Study</a></li>
+          <li><a class="icon icon-photo" href="#">Collections</a></li>
+          <li><a class="icon icon-wallet" href="#">Credits</a></li>
+        </ul>
+      </nav>
+      </div>
+      </div>
+      <div class="main clearfix">
+              <div id="st-trigger-effects" class="column">
+                <button data-effect="st-effect-1">Slide in on top</button>
+                <button data-effect="st-effect-4">Slide along</button>
+                </div>
+                </div>
+<header>
+  <span>Author : <a href="http://glennsmith.me" target="_blank">Glenn Smith</a></span-->
+  <button class="hamburger">&#9776;</button>
+  <button class="cross">&#735;</button>
+</header>
+
+<div class="menu">
+  <ul>
+    <a href="#"><li>LINK ONE</li></a>
+    <a href="#"><li>LINK TWO</li></a>
+    <a href="#"><li>LINK THREE</li></a>
+    <a href="#"><li>LINK FOUR</li></a>
+    <a href="#"><li>LINK FIVE</li></a>
+  </ul>
+</div> 
+
+<nav class="col-sm-3" style="margin-bottom:10%;">
+      <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="205">
+        <li class="active"><a href="#section1">Section 1</a></li>
+        <li><a href="#section2">Section 2</a></li>
+        <li><a href="#section3">Section 3</a></li>
+      </ul>
+      <i class="fa fa-wifi" aria-hidden="true" data-spy="affix" data-offset-top="205"></i>
+    </nav>
+<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="margin:8%;">
+    <div class="hovereffect">
+        <img class="img-responsive" src="http://placehold.it/350x200" alt="">
+        <div class="overlay">
+            <h2>Ruddy</h2>
+            <a class="info" href="#">connect</a>
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+    <div class="hovereffect2">
+        <img class="img-responsive" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRNqY0dpUt6PA3zNswdaxPDO7I4weeTNw3eGnoEJv0UsYFATG21" alt=""-->
+        <div class="overlay hovereffect2">
+           <h3 style="color:#fff;">  09006200101119078</h3>
+           <a class="info" href="#">link here</a>
+        </div>
+    </div>
+</div>
+<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+    <div class="hovereffect11">
+        <img class="img-responsive" src="http://placehold.it/350x250" alt="">
+            <div class="overlay">
+                <h2>Effect 12</h2>
+        <p> 
+          <a href="#">LINK HERE</a>
+        </p> 
+            </div>
+    </div>
+</div>
+<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+    <div class="hovereffect">
+      <div class="box">
+      <div class="boxInner">
+        <img class="img-responsive" src="http://placehold.it/350x250" alt="">
+            <div class="overlay">
+                <h2>Effect 12</h2>
+        <p> 
+          <a href="#">LINK HERE</a>
+        </p> 
+        </div>
+        </div>
+            </div>
+    </div>
+</div>
+<div class="box">
+      <div class="boxInner">
+        <img src="http://video.skysports.com/Jjd2pvNzE66_erxwCT4HTFkgiGO91SZQ/promo303725058" / style="width:50%; height:50%;">
+     <div class="caption">
+       <h3>Acha Para</h3>
+     </div>
+      </div>
+    </div>
+
+
+    <div data-spy="affix" class="pull-left hidden-sm hidden-xs" 
+style="margin-top:4%">
+<center><h1 class="text-success">... icons code ...</h1></center>
+
+<span class="fa-stack fa-lg">
+<i class="fa fa-circle fa-stack-2x"></i>
+<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+</span>
+</div>
+<a href="#" onclick="openModal()">Open a Modal by jQuery</a>
+<script type="text/javascript">
+
+function openModal(){
+
+    $('#myModal').modal();
+}       
+</script>
+
+<div class="hero-unit" style="margin-top:40px">
+        <h1 style="font-size:58px">bootstrap-wysihtml5 <small>Simple, beautiful wysiwyg editors</small></h1>
+        <hr/>
+        <textarea class="textarea" placeholder="Enter text ..." style="width: 810px; height: 200px"></textarea>
+    </div>
+
+
+<script src="js/wysihtml5-0.3.0.js"></script>
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/prettify.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-wysihtml5.js"></script>
+
+<script>
+    $('.textarea').wysihtml5();
+</script>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Launch demo modal
+</button>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <p>One fine body&hellip;</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="container">
+  <div class="row">
+    <input type="hidden" name="count" value="1" />
+        <div class="control-group" id="fields">
+            <label class="control-label" for="field1">Nice Multiple Form Fields</label>
+                <div class="controls" id="profs"> 
+                <form class="input-append">
+                    <div id="field"><input autocomplete="off" class="input" id="field1" name="prof1" type="text" placeholder="Type something" data-items="8"/><button id="b1" class="btn add-more" type="button">+</button></div>
+                </form>
+            <br>
+            <small>Press + to add another form field :)</small>
+            </div>
+        </div>
+  </div>
+</div>
+
+<div class="container " style="margin-top:20% ">
+  <div class="row">
+    <input type="hidden" name="count" value="1" />
+        <div class="control-group" id="categories">
+            <label class="control-label" for="category1">Nice Multiple Form Fields</label>
+            <div class="controls" id="profs"> 
+                <form class="input-append">
+                    <div id="category"><input autocomplete="off" class="input" id="category1" name="prof1" type="text" placeholder="Type something" data-items="8"/><button id="b1" class="btn add-more" type="button">+</button></div>
+                </form>
+            <br>
+            <small>Press + to add another form field :)</small>
+            </div>
+        </div>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    var next = 1;
+
+    $(".add-more").click(function(e){
+        e.preventDefault();
+        var addto = "#category" + next;
+        var addRemove = "#category" + (next);
+        next = next + 1;
+        var newIn = '<input autocomplete="off" class="input form-control" id="category' + next + '" name="category' + next + '" type="text">';
+        var newInput = $(newIn);
+        var removeBtn = '<button id="remove' + (next - 1) + '" class="btn btn-danger remove-me" >-</button></div><div id="category">';
+        var removeButton = $(removeBtn);
+        $(addto).after(newInput);
+        $(addRemove).after(removeButton);
+        $("#category" + next).attr('data-source',$(addto).attr('data-source'));
+        $("#count").val(next);  
+        
+            $('.remove-me').click(function(e){
+                e.preventDefault();
+                var fieldNum = this.id.charAt(this.id.length-1);
+                var fieldID = "#category" + fieldNum;
+                $(this).remove();
+                $(fieldID).remove();
+            });
+    });
+    
+
+    
+});
+
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    var next = 1;
+    $(".add-more").click(function(e){
+        e.preventDefault();
+        var addto = "#field" + next;
+        var addRemove = "#field" + (next);
+        next = next + 1;
+        var newIn = '<input autocomplete="off" class="input form-control" id="field' + next + '" name="field' + next + '" type="text">';
+        var newInput = $(newIn);
+        var removeBtn = '<button id="remove' + (next - 1) + '" class="btn btn-danger remove-me" >-</button></div><div id="field">';
+        var removeButton = $(removeBtn);
+        $(addto).after(newInput);
+        $(addRemove).after(removeButton);
+        $("#field" + next).attr('data-source',$(addto).attr('data-source'));
+        $("#count").val(next);  
+        
+            $('.remove-me').click(function(e){
+                e.preventDefault();
+                var fieldNum = this.id.charAt(this.id.length-1);
+                var fieldID = "#field" + fieldNum;
+                $(this).remove();
+                $(fieldID).remove();
+            });
+    });
+    
+
+    
+});
+
+</script>
+
+
+        <div class="input_fields_wrap">
+    <button class="add_field_button">Add More Fields</button>
+    <div><input type="text" name="mytext[]"></div>
+</div>
+
+ <div class="adds" style="margin:4%; padding: 4%">
+    <button class="categories btn-primary btn-lg">Add More Fields</button>
+    <div><input type="text" name="category"></div>
+</div>
+
+<script>
+  $(document).ready(function() {
+    var max_fields      = 10; //maximum input boxes allowed
+    var wrapper         = $(".input_fields_wrap"); //Fields wrapper
+    var add_button      = $(".add_field_button"); //Add button ID
+    
+    var x = 1; //initlal text box count
+    $(add_button).click(function(e){ //on add input button click
+        e.preventDefault();
+        if(x < max_fields){ //max input box allowed
+            x++; //text box increment
+            $(wrapper).append('<div><input type="text" name="mytext[]"/><a href="#" class="remove_field">Remove</a></div>'); //add input box
+        }
+    });
+    
+    $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
+        e.preventDefault(); $(this).parent('div').remove(); x--;
+    })
+});
+</script>
+
+<script>
+  $(document).ready(function() {
+    var max_fields      = 3; //maximum input boxes allowed
+    var wrapper         = $(".adds"); //Fields wrapper
+    var add_button      = $(".categories"); //Add button ID
+    
+    var x = 1; //initlal text box count
+    $(add_button).click(function(e){ //on add input button click
+        e.preventDefault();
+        if(x < max_fields){ //max input box allowed
+            x++; //text box increment
+            $(wrapper).append('<div><input type="text" name="category"/><a href="#" class="remove_field">Remove</a></div>'); //add input box
+        }
+    });
+    
+    $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
+        e.preventDefault(); $(this).parent('div').remove(); x--;
+    })
+});
+</script>
+    <script type="text/javascript">
+      $( ".cross" ).hide();
+$( ".menu" ).hide();
+$( ".hamburger" ).click(function() {
+$( ".menu" ).slideToggle( "slow", function() {
+$( ".hamburger" ).hide();
+$( ".cross" ).show();
+});
+});
+
+$( ".cross" ).click(function() {
+$( ".menu" ).slideToggle( "slow", function() {
+$( ".cross" ).hide();
+$( ".hamburger" ).show();
+});
+});
+    </script>    
+
+</body>
+</html>
